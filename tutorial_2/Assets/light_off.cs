@@ -17,7 +17,7 @@ public class light_off : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(x < 10)
+        if(x < 30)
         {
             lightt.range = 10;
             x = x + 1;
