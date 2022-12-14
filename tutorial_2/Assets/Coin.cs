@@ -22,6 +22,7 @@ public class Coin : MonoBehaviour
             Col.gameObject.SetActive(false);
             if (coins == 7)
             {
+                Cursor.lockState = CursorLockMode.None;
                 SceneManager.LoadScene("EndScene");
             }
         }

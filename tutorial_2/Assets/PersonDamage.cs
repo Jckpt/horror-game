@@ -22,8 +22,8 @@ public class PersonDamage : MonoBehaviour
     {
         if(currentHealth == 0)
         {
-            currentHealth = maxHealth;
-            SceneManager.LoadScene("MainMenu");
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("EndScene");
         }
 
     }
