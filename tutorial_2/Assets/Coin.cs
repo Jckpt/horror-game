@@ -22,7 +22,7 @@ public class Coin : MonoBehaviour
             Col.gameObject.SetActive(false);
             if (coins == 7)
             {
-                SceneManager.LoadScene("MainMenu");
+                SceneManager.LoadScene("EndScene");
             }
         }
     }

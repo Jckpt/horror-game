@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PersonDamage : MonoBehaviour
 {
-    public int maxHealth=5;
+    public int maxHealth=2;
     public int currentHealth;
 
     public HealthBar healthBar;
@@ -20,14 +20,10 @@ public class PersonDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            //AreaDamage();
-            TakeDamage(1);
-        }
         if(currentHealth == 0)
         {
-            SceneManager.LoadScene("SampleScene");
+            currentHealth = maxHealth;
+            SceneManager.LoadScene("MainMenu");
         }
 
     }
@@ -46,4 +42,11 @@ public class PersonDamage : MonoBehaviour
             TakeDamage(1);
         }
     }*/
-}
+    public void OnTriggerEnter(Collider Col)
+    {
+        if (Col.gameObject.tag == "Enemy")
+        {
+            TakeDamage(1);
+        }
+    }
+}   

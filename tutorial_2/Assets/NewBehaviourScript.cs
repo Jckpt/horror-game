@@ -16,6 +16,6 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         enemy.SetDestination(Player.position);
-        
+        enemy.speed = (float)(3.5 + 0.17 * Score.scoreValue);
     }
 }
