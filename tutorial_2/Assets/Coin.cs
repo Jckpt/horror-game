@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Coin : MonoBehaviour
 {
@@ -18,11 +20,15 @@ public class Coin : MonoBehaviour
             coins++;
             Score.scoreValue = coins;
             Col.gameObject.SetActive(false);
+            if (coins == 7)
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+ 
     }
 }
