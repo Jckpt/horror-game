@@ -10,12 +10,12 @@ public class NewBehaviourScript : MonoBehaviour
     public Transform Player;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         enemy.SetDestination(Player.position);
+        
     }
 }
