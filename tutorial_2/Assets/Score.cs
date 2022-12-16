@@ -16,6 +16,6 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "KNIFE " + scoreValue + "/7";
+        score.text = "COIN " + scoreValue + "/7";
     }
 }
